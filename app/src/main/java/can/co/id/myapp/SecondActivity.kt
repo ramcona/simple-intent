@@ -9,7 +9,17 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Aktifitas Saya" //mengganti judul  ActionBar
+
+        /*mulai menambahkan icon pada ActionBar*/
+        supportActionBar?.setLogo(R.drawable.ic_launcher_foreground)
+        supportActionBar?.setDisplayUseLogoEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        /*selesai menambahkan icon pada ActionBar*/
+
+        supportActionBar?.subtitle = "Aktifitas 14 April 2020" // menambahkan subjudul
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true) // menambahkan action kembali
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
